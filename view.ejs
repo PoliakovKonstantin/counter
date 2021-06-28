@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+         #tab {
+            border: 2px solid black;
+            text-align: center;
+            border-collapse: collapse;
+            margin-left: 27%;
+            margin-top: 5%;
+        }
+        button {
+            background-color: bisque;
+        }
+        td, th {
+            padding: 3px; /* Поля вокруг содержимого таблицы */
+            border: 1px solid black; /* Параметры рамки */
+   }
+    </style>
+</head>
+<body>
+    <table  id='tab'>
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">description</th>
+            <th scope="col">authors</th>
+            <th scope="col">favorite</th>
+            <th scope="col">fileCover</th>
+            <th scope="col">fileName</th>
+            <th scope="col">fileBook</th>
+            <th scope="col">views</th>
+            <th scope="col">putBook</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><%= id%></th>
+                <td><%= arr[id].title %></td>
+                <td><%= arr[id].description %></td>
+                <td><%= arr[id].authors %></td>
+                <td><%= arr[id].favorite %></td>
+                <td><%= arr[id].fileCover %></td>
+                <td><%= arr[id].fileName %></td>
+                <td><%= arr[id].fileBook %></td>
+                <td><%= views %></td>
+                <td class="text-right">
+                    <a class="btn btn-sm btn-primary" href="/api/books/<%# el.id %>">
+                        <i class="fa fa-pencil" aria-hidden="true">putBook</i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

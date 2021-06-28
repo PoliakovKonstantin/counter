@@ -1,0 +1,10 @@
+services:
+    storage:
+        image: redis:latest
+    script:
+        build: ./script
+        ports: 
+            - 80:3001
+        environment:
+            - PORT=3001
+            - STORAGE_URL=storage
